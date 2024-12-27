@@ -1,0 +1,815 @@
+
+
+/* Estilo del menú de navegación */
+#navMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Fondo oscuro para que haga juego */
+    padding: 10px 0;
+}
+
+#navMenu li {
+    margin: 0 15px;
+    position: relative; /* Asegura que no haya pseudo-elementos */
+}
+
+#navMenu li::before, #navMenu li::after {
+    content: none; /* Elimina cualquier pseudo-elemento anterior */
+}
+
+
+
+
+
+
+
+#navMenu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+#navMenu a:hover {
+    background-color: #3498db; /* Azul elegante que resalte en el fondo oscuro */
+    color: white;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: hsl(0, 0%, 96%);
+    color: #333333;
+    padding-bottom: 0.5rem 0; /* Add padding to prevent footer from overlapping content */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 1; /* Reduced padding to make header smaller */
+}
+
+/* Secciones con delay para el orden de aparición */
+.delay-1 { transition-delay: 0.3s; }
+.delay-2 { transition-delay: 0.6s; }
+.delay-3 { transition-delay: 0.9s; }
+.delay-4 { transition-delay: 1.2s; }
+button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+.toggle-button {
+    background-color: #007aff; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 5px 15px; /* Espaciado interno reducido */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasas por encima */
+    font-size: 14px; /* Tamaño de la fuente más pequeño */
+    display: inline-block; /* Hace que el botón no ocupe toda la pantalla */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.toggle-button:hover {
+    background-color: #005bb5; /* Color de fondo al pasar el cursor */
+}
+
+header img.header-image {
+    width: 100%;
+    height: auto;
+    max-height: 140px; /* Limit the height of the header image */
+    object-fit: cover; /* Ensures the image covers the space while preserving aspect ratio */
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem; /* Adjust font size if needed */
+    padding: 0.1rem 0; /* Adjust padding as needed */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 0.1rem; /* Adjust margin as needed */
+    font-size: 0.9rem; /* Reduce el tamaño del texto del menú para una apariencia más compacta */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Adjust font size if needed */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #8daccc;
+    text-align: center;
+    font-size: 18px;
+}
+h4 {
+    color: #8daccc; /* Celeste oscuro */
+    text-align: left; /* Alineado a la izquierda */
+    font-style: italic; /* Cursiva */
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+h5 {
+    font-family: 'Arial', sans-serif; /* Fuente del título */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita para resaltar */
+    color: #8daccc; /* Color del texto */
+    margin-bottom: 1px; /* Muy poco espacio debajo del título */
+}
+
+
+
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0;
+}
+
+img.section-image {
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem; /* Adjust padding to fit footer content */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.app-container {
+    margin-bottom: 2rem; /* Space between applications */
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-iframe {
+    border: none;
+}
+        /* Efecto de animación al hacer scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+        /* Efectos adicionales con íconos */
+.dynamic-icon {
+    font-size: 2rem;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.dynamic-icon:hover {
+    transform: rotate(20deg);
+}
+/* Estilo de las imágenes y videos */
+video, img.section-image {
+    max-width: 100%;
+    display: block;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none; /* Elimina el estilo de lista predeterminado */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+    position: relative; /* Necesario para el pseudo-elemento :before */
+    padding-left: 40px; /* Aumenta la sangría a la izquierda para el texto */
+}
+
+ul li:before {
+    content: '•'; /* El punto de la lista */
+    position: absolute; /* Posiciona el punto en relación al elemento li */
+    left: 10px; /* Ajusta la posición del punto para dar más sangría */
+    color: #007aff; /* Color del punto */
+    font-size: 1.5rem; /* Aumenta el tamaño del punto */
+    line-height: 1; /* Alinea verticalmente el punto con el texto */
+    top: 0; /* Asegúrate de que el punto esté en la misma línea que el texto */
+}
+
+ol {
+    padding-left: 20px; /* Puedes ajustar este valor si quieres más o menos espacio */
+    list-style-type: none; /* Esto elimina los números predeterminados */
+}
+
+ol li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+ol li:before {
+    content: counter(item) '. '; /* Agrega el número antes de cada elemento */
+    counter-increment: item; /* Aumenta el contador para el siguiente elemento */
+    position: absolute;
+    left: -30px; /* Ajusta el espacio a la izquierda como prefieras */
+    color: #007aff; /* El mismo color que usaste para el marcador en <ul> */
+    font-size: 1.1rem; /* Tamaño del número */
+}
+
+/* Asegúrate de reiniciar el contador al principio de la lista */
+ol {
+    counter-reset: item; /* Resetea el contador al iniciar la lista */
+}
+
+/* Efecto de animación al hacer scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+/* Efectos adicionales con íconos */
+.dynamic-icon {
+    font-size: 2rem;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.dynamic-icon:hover {
+    transform: rotate(20deg);
+}
+
+/* Sección de columnas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+header nav ul li a:hover {
+    color: #007aff;
+    text-decoration: underline;
+}
+
+p, li {
+    margin: 7px 0;
+    color: #555;
+    font-size: 0.7rem;
+    text-align: justify;
+}
+.center-text {
+    text-align: center;
+    color: #fff;
+
+}
+iframe {
+    border: 2px solid #ccc; /* Bordes suaves */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 120%; /* Adaptable al contenedor */
+    max-width: 100%; /* No excede el tamaño del contenedor */
+    height: 600px; /* Aumenta la altura para que no se corte el contenido */
+    overflow: hidden; /* Scroll interno si es necesario */
+    margin: 20px 0; /* Esp*/
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+code {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 14px;
+}
+
+.console {
+	font-family: 'Inconsolata', monospace;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: black;
+	opacity: .8;
+	padding: 20px;
+	color: white;
+	z-index: 99999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #126d9d;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+	/*font-weight: bold;*/
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .1em;
+	line-height: 1.2;
+}
+
+h1 {
+	margin: 50px 0;
+}
+
+h1.title{
+	color: #416983;
+}
+
+.carousel h1:after, .carousel h1:before {
+    content: " ";
+    display: none;
+    width: 0;
+    height: 2px;
+    margin: 0;
+}
+
+h1:after, h1:before {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 20px auto 20px;
+    background: #4fbfa8;
+}
+
+h1.title:after, h1.title:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 20px auto 20px;
+    background: #4fbfa8;
+}
+
+
+h3 {
+	font-style: italic;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.hood-info h1 {
+	margin: inherit;
+}
+
+.chart {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.kpi-name {
+	font-size: 16px;
+}
+
+.kpi {
+	font-size: 40px;
+	line-height: 42px;
+}
+
+.pos {
+	color: #65b146;
+}
+
+.neg {
+	color: #c52828;
+}
+
+p {
+	color: #333;
+}
+
+code {
+	display: inline-block;
+	margin: 3px 3px 0 0;
+}
+
+.table {
+	width: inherit;
+}
+
+th, td {
+	padding: 5px 10px !important;
+}
+
+thead {
+	background-color: #656565;
+	color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+.app-links img {
+  max-width: 150px;
+}
+
+.featurette-image {
+  max-width: 386.66px;
+}
+
+.search {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.search > .shiny-input-container {
+	display: inline;
+}
+
+.search > .shiny-input-container input{
+	padding: 24px 14px;
+	font-size: 21px;
+}
+
+.search.addrSearch input {
+	padding: 6px;
+	font-size: 14px !important;
+}
+
+div.addrSearch.search {
+	width: 100%;
+}
+
+/* shinyapps.io override */
+
+div#ss-connect-dialog {
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	z-index: 15;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -150px;
+	text-align: center;
+	padding: 75px 0;
+	z-index: 999999;
+	font-size: 1em;
+}
+
+div#ss-connect-dialog a,
+div#ss-connect-dialog a:visited {
+	color: #03BCC0 !important;
+}
+
+/* shinyapps.io override end */
+
+#top-link-block {
+	/*position: fixed;*/
+	bottom: 20px;
+	right: 10px;
+	opacity: .5;
+}
+
+#top-link-block:hover {
+	opacity: 1;
+}
+
+/* Legend */
+
+.legend-custom {
+	height: 50px;
+	background: rgba(256,256,256,.8);
+	text-align: center;
+	padding: 10px;
+}
+
+.legend-group {
+	display: inline;
+	margin-right: 15px;
+}
+
+.legend-element-label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+}
+
+.legend-element-label[color='yelp'] {
+	background: #03BCC0;
+}
+
+.legend-element-label[color='schools'] {
+	background: #FF5850;
+}
+
+.legend-element-label[color='location'] {
+	background: #C10250;
+}
+
+.legend-element-name {
+	display: inline;
+	line-height: 14px;
+	margin: 0 auto;
+	margin-left: 5px;
+	position: relative;
+	top: -4px;
+}
+
+/* Legend end */
+
+@media screen and (max-width: 400px) {
+
+	.kpi {
+		margin-bottom: -15px;
+		font-size: 52px;
+		line-height: 1.2em;
+	}
+
+	.kpi-name:after {
+		content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 20px auto 10px;
+    background: #4fbfa8;
+	}
+
+	.kpi-group div:last-child div:last-child .kpi-name:after {
+		width: 0;
+	}
+
+	.chart {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	.panel-body p {
+		text-align: justify;
+	}
+}
+
+/* ****** BEGIN ******* */
+/* Property card styles */
+
+.property-card-container a {
+  font-size: 16px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+}
+
+.property-card-container p a {
+	font-size: inherit;
+	display: inline;
+	margin: inherit;
+	width: inherit;
+}
+
+.property-card-container a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+
+.property-card-container a:hover {
+  text-decoration: none;
+}
+
+.property-card-container figure {
+  margin: 0;
+}
+
+.property-card-container img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+}
+
+.property-info {
+    padding: 2px 16px 16px;
+		margin-top: -100px;
+		width: 100%;
+		background: white;
+		opacity: .8;
+		animation: opacity-on 1s;
+}
+
+.property-card-container a:hover .property-info {
+	-webkit-animation: opacity-off 1s;
+	animation: opacity-off 1s;
+	animation-fill-mode: forwards;
+}
+
+.property-price {
+	display: inline;
+}
+
+.property-details {
+	display: inline;
+	align: right;
+}
+
+@media screen and (max-width: 800px){
+  .property-card-container a {
+      width: calc(50% - 6px);
+  }
+}
+
+@media screen and (max-width: 400px){
+  .property-card-container a {
+      width: 100%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .property-card-container a {
+    width: calc(33% - 6px);
+  }
+
+  .property-card-container a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .property-card-container a:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .property-card-container a {
+    width: calc(50% - 10px);
+  }
+
+  .property-card-container a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .property-card-container a:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .property-card-container a {
+    width: 100%;
+  }
+
+  .property-card-container a {
+    margin-right: 0;
+		margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 990px) {  
+  .property-info {
+	  margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+	.property-card-container a img {
+		/*filter: grayscale(100%);*/
+		/*animation: color-to-gs 1s;*/
+	}
+
+	.property-card-container img {
+		transition: transform .8s ease-in-out;
+		/*filter: grayscale(100%);*/
+	}
+
+	.property-card-container a:hover img {
+	  transform: scale(1.15);
+		/*-webkit-animation: gs-to-color 1s;*/
+		/*animation: gs-to-color 1s;*/
+		/*animation-fill-mode: forwards;*/
+	}
+
+	.property-card-container a:hover div.property-info {
+		transform: scale(1);
+	}
+
+	/* Code for old Chrome, Safari and Opera */
+	@-webkit-keyframes gs-to-color {
+	    from {filter: grayscale(100%);}
+	    to   {filter: grayscale(0%);}
+	}
+
+	@-webkit-keyframes color-to-gs {
+	    from {filter: grayscale(0%);}
+	    to   {filter: grayscale(100%);}
+	}
+
+	/* Standard syntax */
+	@keyframes gs-to-color {
+		from {filter: grayscale(100%);}
+		to   {filter: grayscale(0%);}
+	}
+
+	@keyframes color-to-gs {
+		from {filter: grayscale(0%);}
+		to   {filter: grayscale(100%);}
+	}
+}
+
+/* Code for old Chrome, Safari and Opera */
+@-webkit-keyframes opacity-off {
+    from {filter: opacity(100%);}
+    to   {filter: opacity(0%);}
+}
+
+@-webkit-keyframes opacity-on {
+    from {filter: opacity(0%);}
+    to   {filter: opacity(100%);}
+}
+
+@keyframes opacity-off {
+    from {filter: opacity(100%);}
+    to   {filter: opacity(0%);}
+}
+
+@keyframes opacity-on {
+    from {filter: opacity(0%);}
+    to   {filter: opacity(100%);}
+}
+
+/* Property card styles */
+/* ******* END ******** */
+
+
+@media print{
+	.btn {
+		display: none;
+	}
+}

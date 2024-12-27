@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - José Luis Pérez Calle</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #0056b3, #66ccff);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        p {
+            margin: 0;
+            font-size: 0.74rem; /* Tamaño de letra moderado */
+            text-align: justify; /* Justifica el texto */
+            line-height: 1.4; /* Mejora la legibilidad */
+        }
+        header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .accordion {
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .accordion-header {
+            padding: 1rem;
+            background: #e6f7ff;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            transition: background 0.3s;
+        }
+        .accordion-header:hover {
+            background: #cceeff;
+        }
+        .accordion-content {
+            display: none;
+            padding: 1rem;
+            background: #fff;
+        }
+        ol {
+            list-style: none;
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 40px;
+            font-size: 0.8rem;
+            text-align: justify;
+        }
+        ol li:before {
+            content: counter(item) '. ';
+            counter-increment: item;
+            position: absolute;
+            left: 10px;
+            color: #007aff;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+        ol {
+            counter-reset: item;
+        }
+        .photo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0056b3;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skills span {
+            background: #e0f3ff;
+            color: #0056b3;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .custom-break {
+             display: block;
+             height: 10px; /* Controla el espacio */
+             content: "";
+        }
+        br {
+            display: block;
+            margin: 1px 0; /* Controla el espacio antes y después del salto */
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #0056b3;
+            color: white;
+            position: relative;
+            margin-top: 2rem;
+        }
+    </style>
+    <script>
+        function toggleAccordion(event) {
+            const header = event.currentTarget;
+            const content = header.nextElementSibling;
+            const isOpen = content.style.display === 'block';
+            content.style.display = isOpen ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>José Luis Pérez Calle</h1>
+        <h2>Postdoctoral Researcher | University of Cadiz</h2>
+    </header>
+    <div class="container">
+        <section class="photo">
+            <img src="assets/images/joseluis.jpg" alt="José Luis Pérez Calle">
+        </section>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>Personal Information</strong>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Date of Birth:</strong> 30/10/1997</li>
+                    <li><strong>Email:</strong> joseluis.perezcalle@uca.es</li>
+                    <li><strong>Phone:</strong> +34 697331851</li>
+                    <li><strong>ORCID:</strong> 0000-0003-1492-6587</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>Education</strong>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>PhD in Agrifood Resources</strong> - University of Cadiz (2021-2024)</li>
+                    <li><strong>Master’s in Bioinformatics and Biostatistics</strong> - Universitat Oberta de Catalunya (2019-2021)</li>
+                    <li><strong>Degree in Biotechnology</strong> - University of Cadiz (2015-2019)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>Professional Experience</strong>
+            </div>
+            <div class="accordion-content">
+                <ol>
+                    <li><strong>Postdoctoral Researcher</strong> - University of Cadiz (2024 - Present)</li>
+                    <li><strong>FPU Predoctoral Research Fellowship</strong> - University of Cadiz (2021 - 2024)</li>
+                    <li><strong>Research Support Technician</strong> - IVAGRO, University of Cadiz (2019 - 2021)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>Skills</strong>
+            </div>
+            <div class="accordion-content">
+                <div class="skills">
+                    <span>Spectroscopy</span>
+                    <span>Chemometrics</span>
+                    <span>Machine Learning</span>
+                    <span>Mass Spectrometry</span>
+                    <span>Agri-Food Analysis</span>
+                    <span>Data Interpretation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>About me</strong>
+            </div>
+            <div class="accordion-content">
+                <div class="About me">
+                 <p>I completed my Biotechnology degree at the University of Cadiz (UCA) with the Award for Best Academic Record. During my studies I worked as a collaborating student in Analytical Chemistry for three years and received a collaboration grant from the Spanish Ministry of Education to develop a project on fire investigation, resulting in a high-impact publication. I was awarded a competitive Santander Bank scholarship for a one-month research stay at Singular Research Centers (CiMUS), under the supervision of Dr. José Tubío, where I gained experience in handling large-scale data.</p> 
+                 <span class="custom-break"></span>
+                 <p>I worked as a Research Support Technician (December 2019-November 2021) at the Wine and Agrifood Research Institute (IVAGRO), analyzing agri-food samples using techniques such as Gas Chromatography-Mass Spectrometry (GC-MS), Gas Chromatography-Ion Mobility Spectrometry (GC-IMS), Infrared Spectroscopy (FTIR and NIR). Simultaneously, I completed a Master's in Bioinformatics and Biostatistics at the Universitat Oberta de Catalunya, enhancing my skills in data handling and machine learning (ML) algorithms.</p> 
+                 <span class="custom-break"></span>
+                 <p>In December 2021, I obtained a University Teaching Training (FPU) scholarship to carry out my PhD in the Department of Analytical Chemistry (UCA), finishing it in December 2024 with the cum laude distinction. During my doctoral research, I did three research stays at internationally recognized institutions in the analytical chemistry field. In December 2023, I completed a three-month research stay at the Gdansk University of Technology (Poland), funded by the FPU mobility grants and supervised by Dr. Tomasz Dymerski, which allowed me to obtain the International Doctorate mention. In May 2024, I returned to the same institution for a one-month stay funded by CEIA3. In October 2024, I completed a one-month stay at the University of Brest (France), supervised by Dr. Memboeuf and funded by SEA-EU. Completing my PhD in under three years allowed me to begin a postdoctoral research period under the same FPU scholarship, which I am currently undertaking until December 2025, focusing on data analysis and ML applications.</p>
+                 <span class="custom-break"></span>
+                 <p>My scientific contributions focused on analyzing food and forensic samples by combining analytical techniques with advanced ML algorithms to enhance data interpretation and model performance. I developed and applied methods using GC-IMS, FTIR, NIR, and GC-MS, along with mass spectrometry techniques such as triple quadrupoles and ion traps (University of Brest) and systems like GCxGC-MS and electronic noses (University of Gdansk). These techniques generate large datasets, which have been integrated with optimization, classification, and regression algorithms for sample characterization. I have developed several web applications, many of which are published in manuscripts, enabling the online implementation of ML models for practical use.
+                    I have published 19 JCR articles (more than 70% in Q1 and 58% as first author) and 6 book chapters. My publications have received 138 citations, resulting in a h-index of 7. I have engaged in several international collaborations, which have led to joint publications with institutions such as Universitat Politècnica de Catalunya, Gdańsk University of Technology, and Gadjah Mada University. Additionally, I have participated in 1 research project with the Aula Universitaria del Estrecho in collaboration with University Abdelmalek Essaadi (Morocco) and have contributed as a researcher to the international Interreg project (FIREPOCTEP), which involves 15 institutions from Spain and Portugal.</p>
+                <span class="custom-break"></span>
+                 <p>I participated in 22 national and international conferences, receiving several awards. Notable conferences include Forensics 2022 (award for best oral communication); GRASEQA 2022, where I presented both oral and poster presentations (award for best poster); EDUCA and EDIMAR doctoral conference (award for best oral communication). Additionally, I have contributed to 3 international proceedings, including the 3rd International Electronic Conference on Environmental Research and Public Health and the 13th Annual International Conference on Environmental and Life Sciences. Additionally, I earned the International Wildfire Award 2022, the Talent Awards by SEA-EU, and the Best Business Idea Award in atrÉBT! 2024.
+                    I have participated in 1 teaching training project, 1 teacher innovation project, and 7 teaching improvement and innovation projects for degree programs. I have also been involved in 2 OTRI contracts. Furthermore, I participated in 3 research projects (FIREPOCTEP and FEDER-UCA18-107214 and Aula del Estrecho). I have contributed as a researcher in Knowledge Transfer activities within the UCA Quality Assurance System, including events such as "The European Night of Researchers", and “Science Around You.” I have also reviewed articles for journals such as Trends in Food Science and Technology, Sensors, Remote Sensing, and others.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(event)">
+                <strong>Publications</strong>
+            </div>
+            <div class="accordion-content">
+                <ol>
+                    <li>Punta-Sánchez, I.; Dymerski, T.; Calle, J.L.P.; Ruiz-Rodríguez, A.; Ferreiro-González, M.*; Palma, M. Detecting Honey Adulteration: Advanced Approach Using UF-GC Coupled with Machine Learning. Sensors 2024, 24, 7481. <a href="https://doi.org/10.3390/s24237481">https://doi.org/10.3390/s24237481</a></li>
+                    <li>Millatina, N.R.N.; Calle, J. L. P.; Barea-Sepúlveda, M.; Setyaningsih, W*.; Palma, M. Detection and quantification of cocoa powder adulteration using Vis-NIR spectroscopy with chemometrics approach. Food Chemistry 2024, 449, <a href="https://doi.org/10.1016/j.foodchem.2024.139212">https://doi.org/10.1016/j.foodchem.2024.139212</a></li>
+                    <li>Puspitasari, D.; Punta-Sánchez, I.; Calle, J.L.P.; Setyaningsih, W.; Lideman.; Palma, M.; Andriati N.; Manikharda*. Optimization of HS-SPME combined with GC–MS for key marker volatile organic compound analysis in Kappaphycus alvarezii with a chemometric approach. J. Food Meas. Charact 2024, 18, 3510–3526 (2024). <a href="https://doi.org/10.1007/s11694-024-02421-0">https://doi.org/10.1007/s11694-024-02421-0</a></li>
+                    <li>Calle, J.L.P.; Barea-Sepúlveda, M.; Ruiz-Rodríguez, A.; Álvarez, J.Á.; Ferreiro-González, M*.; Palma, M. Rapid Detection and Quantification of Adulterants in Fruit Juices Using Machine Learning Tools and Spectroscopy Data. Sensors 2022, Vol. 22, Page 3852 2022, 22, 3852, <a href="https://doi.org/10.3390/S22103852">https://doi.org/10.3390/S22103852</a></li>
+                    <li>Calle, J.L.P.; Ferreiro-González, M*.; Ruiz-Rodríguez, A.; Fernández, D.; Palma, M. Detection of Adulterations in Fruit Juices Using Machine Learning Methods over FT-IR Spectroscopic Data. Agronomy 2022, 12, 683, <a href="https://doi.org/10.3390/AGRONOMY12030683/S1">https://doi.org/10.3390/AGRONOMY12030683/S1</a></li>
+                    <li>Calle, J.L.P.; Ferreiro-González, M*.; Ruiz-Rodríguez, A.; Barbero, G.F.; Álvarez, J.; Palma, M.; Ayuso, J. A methodology based on ft-ir data combined with random forest model to generate spectralprints for the characterization of high-quality vinegars. Foods 2021, 10, <a href="https://doi.org/10.3390/FOODS10061411">https://doi.org/10.3390/FOODS10061411</a></li>
+                    <li>Barea-Sepúlveda, M., Calle, J. L. P., Ferreiro-González, M*.; Palma, M. Machine learning-based approaches to Vis-NIR data for the automated characterization of petroleum wax blends. Spectrochimica Acta - Part A: Molecular and Biomolecular Spectroscopy 2024, 310. <a href="https://doi.org/10.1016/j.saa.2024.123910">https://doi.org/10.1016/j.saa.2024.123910</a></li>
+                    <li>Calle, J.L.P.; Falatová, B.; Aliaño-González, M.J.; Ferreiro-González, M*.; Palma, M. Machine learning approaches over ion mobility spectra for the discrimination of ignitable liquids residues from interfering substrates. Talanta Open 2022, 6, <a href="https://doi.org/10.1016/J.TALO.2022.100125">https://doi.org/10.1016/J.TALO.2022.100125</a></li>
+                    <li>Barea-Sepúlveda, M.; Ferreiro-González, M*.; Calle, J.L.P.; Barbero, G.F.; Ayuso, J.; Palma, M. Comparison of different processing approaches by SVM and RF on HS-MS eNose and NIR Spectrometry data for the discrimination of gasoline samples. Microchem. J. 2022, 172, <a href="https://doi.org/10.1016/J.MICROC.2021.106893">https://doi.org/10.1016/J.MICROC.2021.106893</a></li>
+                    <li>Calle, J.L.P.; Ferreiro-González, M*.; Aliaño-González, M. J.; Barbero, G. F.; Palma, M. Characterization of biodegraded ignitable liquids by headspace-ion mobility spectrometry. Sensors 2020; 20(21): 6005, 1-11. <a href="https://doi.org/10.3390/s20216005">https://doi.org/10.3390/s20216005</a></li>
+                    <li>Barea-Sepúlveda, M.; Calle, J.L.P.; Ferreiro-González, M.; Palma, M. Development of a Novel HS-GC/MS Method Using the Total Ion Spectra Combined with Machine Learning for the Intelligent and Automatic Evaluation of Food-Grade Paraffin Wax Odor Level. Foods 2024, 13, 1352, <a href="https://www.mdpi.com/2304-8158/13/9/1352">https://10.3390/foods13091352</a></li>
+                    <li>Vázquez-Espinosa, M.; Sancho-Galán, P.; González-de-Peredo, A. V.; Calle, J.L.P.; Ruiz-Rodríguez, A.; Fernández Barbero, G.; Ferreiro-González, M. Enhancing Competency-Based Education in Instrumental Analysis: A Novel Approach Using High-Performance Liquid Chromatography for Real-World Problem Solving. Education Sciences 2024, 14, 461 <a href="https://www.mdpi.com/2227-7102/14/5/461">https://10.3390/EDUCSCI14050461</a></li>
+                    <li>Calle, J.L.P.; Punta-Sánchez, I.; González-de-Peredo, A.V.; Ruiz-Rodríguez, A.; Ferreiro-González, M.; Palma, M. Rapid and Automated Method for Detecting and Quantifying Adulterations in High-Quality Honey Using Vis-NIRs in Combination with Machine Learning. Foods 2023, 12, 2491, <a href="https://www.mdpi.com/2304-8158/12/13/2491">https://10.3390/foods12132491</a></li>
+                    <li>Prajna, D.; Álvarez, M.; Barea-Sepúlveda, M.; Calle, J.L.P.; Suhandy, D.; Setyaningsih, W.; Palma, M. Enhanced Differentiation of Wild and Feeding Civet Coffee Using Near-Infrared Spectroscopy with Various Sample Pretreatments and Chemometric Approaches. Horticulturae 2023, 9, 778,  <a href="https://www.mdpi.com/2311-7524/9/7/778">https://10.3390/horticulturae9070778</a></li>
+                    <li>Gumansalangi, F.; Calle, J.L.P.; Barea-Sepúlveda, M.; Manikharda; Palma, M.; Lideman; Rafi, M.; Ningrum, A.; Setyaningsih, W. A Rapid Method for Authentication of Macroalgae Based on Vis-NIR Spectroscopy Data Combined with Chemometrics Approach. Water (Switzerland) 2023, 15, <a href="https://www.mdpi.com/2073-4441/15/1/100">https://10.3390/W15010100</a></li>
+                    <li>Calle, J.L.P.; Vázquez-Espinosa, M.; Barea-Sepúlveda, M.; Ruiz-Rodríguez, A.; Ferreiro-González, M.; Palma, M. Novel Method Based on Ion Mobility Spectrometry Combined with Machine Learning for the Discrimination of Fruit Juices. Foods 2023, 12, <a href="https://www.mdpi.com/2304-8158/12/13/2536">https://10.3390/foods12132536</a></li>
+                    <li>VBarea-Sepúlveda, M.; Calle, J.L.P.; Ferreiro-González, M.; Palma, M. Rapid Classification of Petroleum Waxes: A Vis-NIR Spectroscopy and Machine Learning Approach. Foods 2023, 12, 3362, <a href="https://www.mdpi.com/2304-8158/12/18/3362">https://10.3390/foods12183362</a></li>
+                    <li>Falatová, B.; Ferreiro-González, M.; Calle, J.L.P.; Álvarez, J.Á.; Palma, M. Discrimination of Ignitable Liquid Residues in Burned Petroleum-Derived Substrates by Using HS-MS ENose and Chemometrics. Sensors 2021, 21, 801, <a href="https://www.mdpi.com/1424-8220/21/3/801">https://10.3390/S21030801</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 José Luis Pérez Calle. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

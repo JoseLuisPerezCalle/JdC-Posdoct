@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js" defer></script>
+    <!-- Iconos para mayor dinamismo -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1> Juan de la cierva Postdoctoral Fellowship - Jose Luis Perez Calle </h1>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#" onclick="showSection('introduction')">Research</a></li>
+                <li><a href="#" onclick="showSection('apps')">Apps</a></li>
+                <li><a href="cva1.html" target="_blank">CVA</a></li> <!-- Nuevo enlace -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="introduction" class="content-section fade-in-section">
+                <!-- Video de introducción -->
+    <!-- Video desde Google Drive -->
+
+    <h2 class="featurette-heading">OUR Research <i class="fas fa-chart-bar dynamic-icon"></i></h2>
+    <hr class="featurette-divider">
+    <p>My scientific contributions centered on leveraging advanced machine learning algorithms for data analysis and model development, with food and forensic samples, along with analytical techniques, providing a valuable context for enhancing interpretation and performance. We analyzed hundreds of samples and shared the models so you don’t have to. The goal is to provide models capable of classifying various types of samples, so you don't need your own database or analyze hundreds of samples. We also strive to make science accessible to everyone—check out this explanatory video, which summarizes the following scientific articles!</p>
+    <ul>
+        <li>Calle, J.L.P.; Punta-Sánchez, I.; González-de-Peredo, A.V.; Ruiz-Rodríguez, A.; Ferreiro-González, M.; Palma, M. Rapid and Automated Method for Detecting and Quantifying Adulterations in High-Quality Honey Using Vis-NIRs in Combination with Machine Learning. Foods 2023, 12, 2491, <a href="https://doi.org/10.3390/foods12132491" target="_blank">https://doi.org/10.3390/foods12132491</a>.</li>
+        <li>Punta-Sánchez, I.; Dymerski, T.; Calle, J.L.P.; Ruiz-Rodríguez, A.; Ferreiro-González, M.*; Palma, M. Detecting Honey Adulteration: Advanced Approach Using UF-GC Coupled with Machine Learning. Sensors 2024, 24, 7481, <a href="https://doi.org/10.3390/s24237481" target="_blank">https://doi.org/10.3390/s24237481</a>.</li>
+    </ul>
+        <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/UfcZJ3NYfEI" 
+            width="100%" 
+            height="400" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <h2 class="featurette-heading">We <i class="fa fa-heart" style="color:#bf2604;"></i> Data.<br><span class="text-muted">We <i class="fa fa-heart" style="color:#bf2604;"></i> free acess.</span></h2>
+        <hr class="featurette-divider">
+    </div>
+            <p>This research focuses on integrating advanced machine learning techniques with spectroscopic methods to tackle challenges in food safety and fire investigation. By utilizing tools such as FTIR, Vis-NIR, and E-nose systems, it enhances the detection of adulteration in products like honey and juices, where traditional methods often fall short. Additionally, it improves the analysis of ignitable liquid residues (ILRs) in fire debris by automating and optimizing data interpretation. This approach not only increases reliability and efficiency but also promotes more sustainable and accessible practices.</p>
+              <p>
+                The main purpose is to demonstrate the potential of combining machine learning with analytical techniques to transform complex data into actionable insights, benefiting industries, research, and quality control processes.
+              </p>
+              <p> The following interactive resources and graphs are provided to enhance understanding and effectively communicate the results of the three articles. </p>
+              <ul>
+                <li>Calle, J.L.P.; Barea-Sepúlveda, M.; Ruiz-Rodríguez, A.; Álvarez, J.Á.; Ferreiro-González, M.; Palma, M. Rapid Detection and Quantification of Adulterants in Fruit Juices Using Machine Learning Tools and Spectroscopy Data. Sensors 2022, 22, 3852, <a href="https://doi.org/10.3390/s22103852" target="_blank">https://doi.org/10.3390/s22103852</a>.</li>
+                <li>Calle, J.L.P.; Ferreiro-González, M.; Ruiz-Rodríguez, A.; Fernández, D.; Palma, M. Detection of Adulterations in Fruit Juices Using Machine Learning Methods over FT-IR Spectroscopic Data. Agronomy 2022, 12, 683, <a href="https://doi.org/10.3390/agronomy12030683" target="_blank">https://doi.org/10.3390/agronomy12030683</a>.</li>
+                <li>Calle, J.L.P.; Vázquez-Espinosa, M.; Barea-Sepúlveda, M.; Ruiz-Rodríguez, A.; Ferreiro-González, M.; Palma, M. Novel Method Based on Ion Mobility Spectrometry Combined with Machine Learning for the Discrimination of Fruit Juices. Foods 2023, 12, 2536, <a href="https://doi.org/10.3390/foods12132491" target="_blank">https://doi.org/10.3390/foods12132491</a>.</li>
+            </ul>
+            <p><b>YOU CAN CLICK ON THE GRAPHS TO ZOOM IN, VIEW SAMPLE NAMES, OR SELECT GROUPS BY INTERACTING WITH THE LEGEND.</b></p>
+              <p>
+                These studies integrate advanced spectroscopic techniques such as FTIR, Vis-NIR, and IMS with machine learning algorithms to rapidly and accurately detect and quantify adulterations in juices. The graphs, including spectra, Principal Component Analysis (PCA), and Hierarchical Cluster Analysis (HCA), offer a clear and accessible presentation of the key findings.</p>        
+                <!-- PCA -->
+                <h5>Principal Components Analysis (PCA)</h5>
+                <p>PCA was applied to reduce the dimensionality of the spectroscopic data, allowing for easier visualization of the variability between the juice samples. As shown in Figure 2, PCA successfully separates grape juice from the other juices, particularly in FTIR (Figure 2A) and IMS (Figure 2B), where the grape juice occupies a distinct position along the first principal component (PC1). This highlights significant spectral differences between grape juice and the other juices, such as apple, pineapple, and orange.</p>
+                <p>In contrast, Vis-NIR (Figure 2C) displays a different trend, with grape juice clustering closer to apple juice in the principal component space, suggesting greater similarity in their spectral profiles. This may indicate that Vis-NIR has a lower capacity to distinguish between grape juice and the other juices compared to FTIR and IMS. Since grape juice was used as the adulterant, this observation may have implications for the detection of adulteration.</p>
+                <p>Overall, all three techniques demonstrated varying degrees of success in differentiating the juices based on their principal components. FTIR and IMS showed clearer separations, while Vis-NIR displayed some overlap between certain juice types.</p>            <div style="text-align: center;"> <!-- Estilo para centrar el botón -->
+                <div class="toggle-button" id="toggleButtonPCA" onclick="toggleGraphs('graphSection2', 'toggleButtonPCA')">Show PCA Plots</div>
+                </div>
+                <div id="graphSection2" class="row" style="display: none;"> <!-- Oculto por defecto -->
+                    <div class="column">
+                        <h5>Figure 2A: PCA score plot using FTIR Spectroscopic Data</h5>
+                        <iframe src="assets/html/pca_ftir_zumos.html" width="100%" height="550px" frameborder="0" class="graph-iframe"></iframe>
+                    </div>
+                    <div class="column">
+                        <h5>Figure 2B: PCA score plot using Ion Mobility Spectrometry Summ Spectra (IMSSS)</h5>
+                        <iframe src="assets/html/pca_ims_zumos.html" width="100%" height="450px" frameborder="0" class="graph-iframe"></iframe>
+                    </div>
+                    <div class="column">
+                        <h5>Figure 2C: PCA score plot using NIR Spectroscopic Data</h5>
+                        <iframe src="assets/html/pca_nirs_zumos.html" width="80%" height="300px" frameborder="0" class="graph-iframe"></iframe>
+                    </div>
+                </div> 
+                <!-- HCA --> 
+                <h5>Hierarchical Cluster Analysis (HCA)</h5>
+                <p>The HCA results, presented in Figure 3, show dendrograms for each of the three techniques, revealing patterns consistent with the PCA findings. Both FTIR (Figure 3A) and IMS (Figure 3B) successfully group the juice samples into distinct clusters. FTIR, in particular, perfectly separates the four main juice types into individual clusters, with further subclusters identifying samples by brand. IMS also shows a similar trend, though the grape juice is further divided into two distinct clusters based on the brand, indicating potential differences in their spectral profiles.</p>
+                <p>Vis-NIR (Figure 3C), however, shows a more diffuse classification pattern. While some grouping according to juice type is observed, the separation is not as clear as in FTIR and IMS. Similar to the PCA results, apple juice appears closer to the grape juice adulterant, and some subclusters are mixed. Pineapple juice is mostly grouped together, although one sample, "P_CA_1_R1", is separated from the main cluster.</p>
+                <div style="text-align: center;"> <!-- Estilo para centrar el botón -->
+                    <div class="toggle-button" id="toggleButtonImages" onclick="toggleGraphs('graphSectionImages', 'toggleButtonImages')">Show Dendograms</div>
+                </div>
+    
+                <div class="graph-section" id="graphSectionImages" style="display: none;">
+                    <div class="column">
+                        <h5>Figure 3A: HCA - FTIR</h5>
+                        <img src="assets/images/cluster_ftir.jpg" alt="FTIR Cluster Analysis" width="110%" height="400px" class="graph-image">
+                    </div>
+                    <div class="column">
+                        <h5>Figure 3B: HCA - IMS</h5>
+                        <img src="assets/images/cluster_ims.jpg" alt="IMSS Cluster Analysis" width="100%" height="600px" class="graph-image">
+                    </div>
+                    <div class="column">
+                        <h5>Figure 3C: HCA - NIR</h5>
+                        <img src="assets/images/cluster_nirs.jpg" alt="NIR Cluster Analysis" width="110%" height="600px" class="graph-image">
+                    </div>
+                </div>
+        <div style="height: 100px;"></div>
+        </section>
+
+
+        <section id="apps" class="content-section">
+            <h2>Applications<i class="fas fa-laptop-code dynamic-icon"></i></h2>
+            <p>In this section we present the different web applications performed for the authentication of food (juices and honey) as well as for the identification of ILRs in fire debris, by different spectroscopic techniques. These applications have been previously published in the different articles that make up this Doctoral Thesis (See results page). </p>
+            <p>It should be noted that all applications have a similar operation. Through an easy-to-use interface, users can rapidly and objectively characterize samples without the need for their own database or prior knowledge of ML algorithms. The operation is simple: users upload an Excel file generated from the spectroscopic analysis of the sample, and by clicking the "submit" button, predictions are made immediately. Furthermore, a downloadable example file (by clicking the "Download" button) is included to help users become familiar with the platform's functionality.Explore our interactive Shiny applications below: </p>
+            
+             <!-- Application 1 -->
+             <h3 style="color: #2980b9;">Application 1:  FT-IR-Based Juice Adulteration Detection Using Machine Learning</h3>
+             <p>This application is a prototype designed to detect and quantify adulteration in fruit juices using FTIR combined with ML algorithms, specifically SVR and SVM models, that achieved the best performance metrics. Users can upload their FTIR data in Excel or CSV format and receive predictions on the adulteration levels. The system is designed to improve as more samples are processed, enhancing its accuracy in identifying adulteration across different juice types.​</p>
+             <div class="app-container">
+                 <iframe src="https://joseluispcalle.shinyapps.io/Application/" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+             </div>
+
+            <!-- Application 2 -->
+             <h3 style="color: #2980b9;">Application 2:  Fire reports: Data from Junta de Leon y Castilla</h3>
+             <p>This application has been created to facilitate the visualization of wildfire reports provided by the Junta de Castilla y León. It features an interactive map where users can view information about different wildfire reports, as well as select the month and year of the incidents. This tool enhances the accessibility and understanding of wildfire data, offering a more intuitive way to explore trends and patterns over time. The information used in this application is sourced from the following link: Junta de Castilla y León Wildfire Data.<a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/incendios-forestales/export/?flg=es-es&disjunctive.provincia&disjunctive.situacion_actual" target="_blank">https://analisis.datosabiertos.jcyl.es/explore/dataset/</a>.​</p>
+             <div class="app-container">
+                 <iframe src="https://joseluisperezcalle.shinyapps.io/APP_INCENDIOS_CASTILLA/" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+             </div>
+
+             <!-- Application 3 -->
+             <h3 style="color: #2980b9;">Application 3:  Rapid Detection and Quantification of Juice Adulteration Using Machine Learning and NIR Spectroscopy data</h3>
+             <p>This application is designed to detect and quantify adulteration in fruit juices using Vis-NIR data combined with ML models, specifically RF for adulteration detection and SVR for adulteration quantification. The user can upload their data in Excel or CSV format, and the system will process the FT-IR spectra to predict adulteration levels. As the application processes more data, its accuracy improves by learning from the variability in the samples. This tool provides a fast, automated solution for the detection of juice-to-juice adulterations, enhancing quality control in the beverage industry.​</p>
+             <div class="app-container">
+                 <iframe src="https://joseluispecalle.shinyapps.io/Adulteration_Juices_App/" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+             </div>
+
+            <!-- Application 4 -->
+            <h3 style="color: #2980b9;">Application 4: Detection of Ignitable Liquids Residues Using HS-GC-IMS and Machine Learning</h3>
+            <p>This application provides insights into the detection of ILRs in fire debris using a combination of HS-GC-IMS and ML algorithms. The technique offers an innovative and automated alternative to traditional methods like GC-MS, allowing for the effective discrimination between ILRs even in the presence of interfering substrates. By applying machine learning tools such as RF and SVM, the models achieve an accuracy of up to 100% for detecting and classifying ILRs, making it a powerful tool in forensic fire investigations​.</p>
+            <div class="app-container">
+                <iframe src="https://joseluispcalle.shinyapps.io/App_Fuegos_IMS/?_ga=2.47529639.1254510689.1641336025-1946327045.1641166303" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+            </div>
+
+            <!-- Application 5 -->
+            <h3 style="color: #2980b9;">Application 5: Portable Electronic Nose System for Fire Debris Analysis</h3>
+            <p>This web application enables users to characterize fire debris samples by detecting and identifying ignitable liquids (ILRs) through machine learning algorithms applied to data from a portable eNose system. Users can upload sample data in an Excel format, and the application provides rapid and automated predictions, offering a user-friendly alternative to traditional.</p>
+            <div class="app-container">
+                <iframe src="https://joseluisperezcalle.shinyapps.io/App_FireDebris_Enose/" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+            </div>
+
+            <!-- Application 6 -->
+            <h3 style="color: #2980b9;">Application 6: Automated Quantification of Juice Adulteration Using HS-GC-IMS and Machine Learning</h3>
+            <p>This application provides an advanced methodology for the detection and quantification of adulteration in fruit juices, specifically focusing on the addition of cheaper grape juice to other juices like orange, pineapple, and apple. The technique integrates HS-GC-IMS with ML algorithms, including SVR, PLS, and RF. The Boruta algorithm is employed to optimize variable selection, improving model performance. The best results were achieved using the SVR model, with an R² of 0.987 and an RMSE of 1.831, demonstrating high accuracy in quantifying adulteration levels. An interactive web application has been developed to allow users to upload their data and automate the detection process (using the best performance models), making it accessible for routine quality control in the food industry.​</p>
+            <div class="app-container">
+                <iframe src="https://agr291.shinyapps.io/App_Zumos_IMS/" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+            </div>
+
+
+             <!-- Application 7 -->
+             <h3 style="color: #2980b9;">Application 7: Honey Adulteration Detection Using Vis-NIR Spectroscopy and Machine Learning</h3>
+             <p>This application is designed to detect and quantify adulteration in honey using Vis-NIR data in combination with ML algorithms. Honey samples from two botanical origins (orange blossom and sunflower) are tested, and adulteration with low-cost honey is introduced at various percentages (5% to 50%). By employing SVM model, the application achieves 100% accuracy in detecting adulteration. For quantification, SVR is used, as it demonstrates excellent performance, with an R² of 0.991 and an RMSE of 1.894, offering a powerful tool for automated quality control in the honey industry.​</p>
+             <div class="app-container">
+                 <iframe src="https://agr291.shinyapps.io/App_Honey" width="100%" height="700px" frameborder="0" class="app-iframe"></iframe>
+             </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p class="center-text">Contact: <a href="mailto:joseluis.perezcalle@gm.uca.es">joseluis.perezcalle@gm.uca.es</a></p>
+    </footer>
+<script src="//code.tidio.co/cng4k6b9bj59mi9qdlt33z7c7aflhukp.js" async></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+<script>
+    // Función para alternar la visibilidad del contenido del desplegable
+    function toggleDropdown(contentId) {
+        const content = document.getElementById(contentId);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
